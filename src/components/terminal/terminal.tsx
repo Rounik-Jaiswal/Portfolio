@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { terminalCommands } from "@/content/terminal";
+import { profile } from "@/content/profile";
 
 /** A single rendered line in the terminal (HTML string + kind). */
 interface Line {
@@ -99,6 +100,11 @@ export function Terminal() {
         return;
       }
       next.push({ kind: "output", html: out });
+
+      // Side effect: the `resume` command also opens the PDF in a new tab.
+      if (lower === "resume" && profile.resumePath) {
+        window.open(profile.resumePath, "_blank", "noopener,noreferrer");
+      }
     } else {
       next.push({
         kind: "output",

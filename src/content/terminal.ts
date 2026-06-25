@@ -55,7 +55,8 @@ export const terminalCommands: TerminalCommand[] = [
   {
     name: "resume",
     listed: true,
-    output: '<span class="dim">→ opens the resume PDF (wired in the real build)</span>',
+    output: () =>
+      `<span class="dim">opening résumé…</span> <a href="${profile.resumePath}" target="_blank" rel="noopener noreferrer" class="cmd" style="text-decoration:underline">${profile.resumePath}</a>`,
   },
   // Fun extras (not listed in help):
   { name: "whoami", listed: false, output: "rounik - but you already knew that ;)" },
