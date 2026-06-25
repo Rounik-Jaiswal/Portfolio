@@ -6,6 +6,8 @@
  * you should only ever need to edit files in this `content/` folder.
  */
 export { profile } from "./profile";
+export { about } from "./about";
+export { education } from "./education";
 export { stats } from "./stats";
 export { experience } from "./experience";
 export { projects } from "./projects";

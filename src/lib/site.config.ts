@@ -10,7 +10,7 @@ export const siteConfig = {
   /** Your live URL once deployed (used for OG tags). */
   url: "https://rounik-jaiswal.vercel.app",
   /** Path in /public to a 1200x630 preview image, or null. */
-  ogImage: null as string | null,
+  ogImage: "/og-image.png" as string | null,
   author: "Rounik Jaiswal",
   keywords: [
     "Rounik Jaiswal",

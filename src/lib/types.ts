@@ -45,7 +45,7 @@ export interface Stat {
 
 /* ---------- Experience ---------- */
 export interface ExperienceItem {
-  period: string; // "Jan 2026 - Present"
+  period: string; // "Jan 2026 - July 2026"
   role: string;
   org: string;
   location: string;
@@ -104,4 +104,25 @@ export interface TerminalCommand {
    * a string for static output, or null to clear the screen.
    */
   output: string | (() => string) | null;
+}
+
+/* ---------- About ---------- */
+export interface About {
+  /** 2–3 sentence narrative blurb shown in the About section. */
+  blurb: string;
+  /** Short availability line, or null to hide it. */
+  availability: string | null;
+  /** Location string, or null to hide. */
+  location: string | null;
+}
+
+/* ---------- Education ---------- */
+export interface EducationItem {
+  institution: string;
+  qualification: string;
+  period: string;
+  /** e.g. "CGPA: 9.08/10" or "92%". */
+  score: string;
+  /** Optional extra note (honors, relevant detail). */
+  note?: string;
 }
