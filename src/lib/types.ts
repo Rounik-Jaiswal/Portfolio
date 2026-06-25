@@ -45,7 +45,7 @@ export interface Stat {
 
 /* ---------- Experience ---------- */
 export interface ExperienceItem {
-  period: string; // "Jan 2026 — Present"
+  period: string; // "Jan 2026 - Present"
   role: string;
   org: string;
   location: string;

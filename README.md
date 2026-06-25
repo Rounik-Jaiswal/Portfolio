@@ -1,4 +1,4 @@
-# Rounik Jaiswal — Portfolio
+# Rounik Jaiswal - Portfolio
 
 Personal portfolio site. Built with Next.js (App Router), TypeScript,
 Tailwind CSS v4, Framer Motion, and D3.
@@ -15,7 +15,7 @@ Open http://localhost:3000.
 ## Editing content (the important part)
 
 **You only ever edit files in `src/content/`.** The UI reads from these
-automatically — you never have to touch component code to update the site.
+automatically - you never have to touch component code to update the site.
 
 | File | What it controls |
 |------|------------------|
@@ -32,7 +32,7 @@ build error rather than a broken page.
 
 ### Theming
 
-Tailwind v4 is CSS-first — all colors, fonts, and the container width are
+Tailwind v4 is CSS-first - all colors, fonts, and the container width are
 defined in `src/app/globals.css` inside the `@theme` and `:root[data-theme]`
 blocks. Change the hex values there to re-theme the whole site. Dark/light is
 handled by `next-themes` (toggle in the navbar); the choice persists.
@@ -44,13 +44,13 @@ Replace `public/resume.pdf` with your latest. The path is set in
 
 ## Deploy
 
-### Option A — Vercel (recommended, easiest)
+### Option A - Vercel (recommended, easiest)
 
 1. Push this repo to GitHub.
 2. Go to vercel.com → New Project → import the repo.
-3. Accept the defaults and deploy. Done — auto-deploys on every push.
+3. Accept the defaults and deploy. Done - auto-deploys on every push.
 
-### Option B — GitHub Pages (static export)
+### Option B - GitHub Pages (static export)
 
 1. In `next.config.ts`, set `REPO_NAME` to your repository's exact name.
 2. Build a static export:
@@ -70,7 +70,7 @@ Note: Vercel keeps Next.js's full feature set; GitHub Pages is static-only
 ```
 src/
 ├── app/          # layout, page, globals.css (theme tokens live here)
-├── components/   # UI — layout/, plus sections/charts/terminal (added in later phases)
+├── components/   # UI - layout/, plus sections/charts/terminal (added in later phases)
 ├── content/      # ⭐ all your editable data
 └── lib/          # types + site config
 ```

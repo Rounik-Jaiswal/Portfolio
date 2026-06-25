@@ -4,7 +4,7 @@
  * Edit these when you have your final domain and an OG image.
  */
 export const siteConfig = {
-  title: "Rounik Jaiswal — Analytics & Engineering",
+  title: "Rounik Jaiswal - Analytics & Engineering",
   description:
     "CS @ VIT and Analyst at Bain Capability Network. Portfolio of consulting analytics, data visualization, machine learning, and full-stack work.",
   /** Your live URL once deployed (used for OG tags). */

@@ -6,7 +6,7 @@ import type { SkillsContent } from "@/lib/types";
  * - `radar`:  the D3 radar chart axes (value 0–1).
  * - `categories`: the labels shown as chips above the bars.
  *
- * Note: `level` labels and bar/radar values are self-assessed estimates —
+ * Note: `level` labels and bar/radar values are self-assessed estimates -
  * adjust them to match how you'd describe yourself.
  */
 export const skills: SkillsContent = {

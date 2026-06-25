@@ -1,5 +1,5 @@
 /**
- * Barrel export — lets components import content from one place:
+ * Barrel export - lets components import content from one place:
  *   import { profile, projects } from "@/content";
  *
  * Everything the site renders comes from these files. To update the site,

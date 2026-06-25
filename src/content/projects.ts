@@ -19,7 +19,7 @@ export const projects: Project[] = [
     type: "Confidential Case",
     name: "Client Process Visualization Dashboard",
     description:
-      "Interactive workflow dashboard built from process manuals — execution flow, ownership, dependencies, and key checkpoints for case teams.",
+      "Interactive workflow dashboard built from process manuals - execution flow, ownership, dependencies, and key checkpoints for case teams.",
     stack: ["Miro", "Mural", "Excel"],
   },
   {
@@ -40,14 +40,14 @@ export const projects: Project[] = [
     type: "ML · Regression",
     name: "Laptop Price Prediction",
     description:
-      "Random Forest price model — R² 0.9356, MAE 109.56, RMSE 163.43 after tuning and feature engineering.",
+      "Random Forest price model - R² 0.9356, MAE 109.56, RMSE 163.43 after tuning and feature engineering.",
     stack: ["Python", "Pandas", "scikit-learn"],
     // Add the GitHub repo link from your resume here:
     // repo: "https://github.com/Rounik-Jaiswal/...",
   },
   {
     type: "Finance · Pipeline",
-    name: "StockSeer — Financial Data Analytics",
+    name: "StockSeer - Financial Data Analytics",
     description:
       "End-to-end stock analysis pipeline using technical indicators and sentiment, with a React interface for visualization and prediction outputs.",
     stack: ["Python", "XGBoost", "Pandas", "yFinance", "React.js"],

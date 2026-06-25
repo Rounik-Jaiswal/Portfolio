@@ -13,7 +13,7 @@ export function Footer() {
         designed &amp; built by {profile.name.toLowerCase()} · {year}
         <span className="text-accent">
           {" "}
-          — press the terminal to explore
+          - press the terminal to explore
         </span>
       </p>
     </footer>

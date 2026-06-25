@@ -6,7 +6,7 @@ import { profile } from "./profile";
  * Commands for the hidden terminal (bottom-right button).
  * `output` can be a string, a function returning a string (for dynamic
  * content), or null to clear the screen. Simple HTML is allowed in output
- * for coloring — use the classes: .cmd (accent), .amber, .dim.
+ * for coloring - use the classes: .cmd (accent), .amber, .dim.
  *
  * `help` and `clear` are handled by the component, but `help` lists every
  * command here whose `listed` is true.
@@ -16,7 +16,7 @@ export const terminalCommands: TerminalCommand[] = [
     name: "about",
     listed: true,
     output:
-      'CS undergrad @ VIT (CGPA 9.08). Analyst Intern at Bain Capability Network — Visualization CoE. I bridge <span class="amber">consulting analytics</span> and <span class="amber">engineering</span>.',
+      'CS undergrad @ VIT (CGPA 9.08). Analyst Intern at Bain Capability Network - Visualization CoE. I bridge <span class="amber">consulting analytics</span> and <span class="amber">engineering</span>.',
   },
   {
     name: "skills",
@@ -41,7 +41,7 @@ export const terminalCommands: TerminalCommand[] = [
     name: "experience",
     listed: true,
     output:
-      "Bain Capability Network — Analyst Intern, Viz CoE (Jan 2026–present)<br>CDMM, VIT — AI Model Developer Intern (Summer 2025)",
+      "Bain Capability Network - Analyst Intern, Viz CoE (Jan 2026-present)<br>CDMM, VIT - AI Model Developer Intern (Summer 2025)",
   },
   {
     name: "contact",
@@ -58,7 +58,7 @@ export const terminalCommands: TerminalCommand[] = [
     output: '<span class="dim">→ opens the resume PDF (wired in the real build)</span>',
   },
   // Fun extras (not listed in help):
-  { name: "whoami", listed: false, output: "rounik — but you already knew that ;)" },
+  { name: "whoami", listed: false, output: "rounik - but you already knew that ;)" },
   { name: "ls", listed: false, output: "about/  projects/  skills/  experience/  secrets/" },
   {
     name: "cd secrets",
