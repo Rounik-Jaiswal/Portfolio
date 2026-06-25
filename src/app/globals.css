@@ -2,7 +2,7 @@
 
 /*
  * ============================================================================
- * THEME - single source of truth (Tailwind v4 is CSS-first; no JS config)
+ * THEME — single source of truth (Tailwind v4 is CSS-first; no JS config)
  * ----------------------------------------------------------------------------
  * To re-theme the entire site, edit the hex values in the two blocks below.
  * `next-themes` toggles the `data-theme` attribute on <html>, and every color
@@ -34,6 +34,38 @@
   /* Custom max-width token → enables the `max-w-content` utility (v4 needs
      this declared; there's no JS config to extend). */
   --container-content: 1120px;
+
+  /* Caret blink animation for the typed hero text. */
+  --animate-blink: blink 1.1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Hero panel entrance — CSS-driven so the hero is never invisible if JS is
+   slow or disabled (critical above-the-fold content). */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.hero-rise {
+  animation: rise-in 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-rise {
+    animation: none;
+  }
 }
 
 /* ---------- Dark theme (default) ---------- */
@@ -47,9 +79,9 @@
   --ink-faint: #5c6678;
   --line: #222a3a;
   --line-soft: #1a2130;
-  --accent: #4fd1c5; /* teal - data/analytics */
-  --accent-2: #f4a259; /* amber - warmth/highlight */
-  --accent-3: #7c8cff; /* indigo - dev */
+  --accent: #4fd1c5; /* teal — data/analytics */
+  --accent-2: #f4a259; /* amber — warmth/highlight */
+  --accent-3: #7c8cff; /* indigo — dev */
   --grid: #1a2130;
   --glow: rgba(79, 209, 197, 0.16);
 }
@@ -106,4 +138,17 @@ body {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
   border-radius: 4px;
+}
+
+/* ---------- Terminal easter egg output coloring ---------- */
+/* The terminal renders command output as HTML using these helper classes
+   (defined in content/terminal.ts). Scoped under .term-output. */
+.term-output .cmd {
+  color: var(--accent);
+}
+.term-output .amber {
+  color: var(--accent-2);
+}
+.term-output .dim {
+  color: var(--ink-faint);
 }
