@@ -69,7 +69,7 @@ export function RadarChart({ data }: { data: RadarAxis[] }) {
         .attr("x", cx + Math.cos(angle(i)) * (r + 22))
         .attr("y", cy + Math.sin(angle(i)) * (r + 18))
         .attr("fill", ink)
-        .attr("font-size", "10.5px")
+        .attr("font-size", "12px")
         .attr("font-family", "var(--font-mono), monospace")
         .attr("text-anchor", "middle")
         .attr("dominant-baseline", "middle")
