@@ -1,26 +1,109 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/*
+ * ============================================================================
+ * THEME — single source of truth (Tailwind v4 is CSS-first; no JS config)
+ * ----------------------------------------------------------------------------
+ * To re-theme the entire site, edit the hex values in the two blocks below.
+ * `next-themes` toggles the `data-theme` attribute on <html>, and every color
+ * utility (bg-bg, text-ink, border-line, ...) reads from these variables.
+ * ============================================================================
+ */
 
+/* Enables `dark:` utilities to react to next-themes' data-theme attribute. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* Map our CSS variables into Tailwind's color + font namespaces, so classes
+   like `bg-bg`, `text-ink`, `border-line`, `font-mono` all work. */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: var(--bg);
+  --color-bg-elev: var(--bg-elev);
+  --color-bg-tile: var(--bg-tile);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+  --color-line: var(--line);
+  --color-line-soft: var(--line-soft);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-accent-3: var(--accent-3);
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  /* Custom max-width token → enables the `max-w-content` utility (v4 needs
+     this declared; there's no JS config to extend). */
+  --container-content: 1120px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ---------- Dark theme (default) ---------- */
+:root,
+:root[data-theme="dark"] {
+  --bg: #0b0e14;
+  --bg-elev: #121722;
+  --bg-tile: #161c28;
+  --ink: #e6eaf2;
+  --ink-soft: #9ba6b8;
+  --ink-faint: #5c6678;
+  --line: #222a3a;
+  --line-soft: #1a2130;
+  --accent: #4fd1c5; /* teal — data/analytics */
+  --accent-2: #f4a259; /* amber — warmth/highlight */
+  --accent-3: #7c8cff; /* indigo — dev */
+  --grid: #1a2130;
+  --glow: rgba(79, 209, 197, 0.16);
+}
+
+/* ---------- Light theme ---------- */
+:root[data-theme="light"] {
+  --bg: #f7f6f2;
+  --bg-elev: #ffffff;
+  --bg-tile: #ffffff;
+  --ink: #15202b;
+  --ink-soft: #52606d;
+  --ink-faint: #8a95a3;
+  --line: #e3e1da;
+  --line-soft: #eceae3;
+  --accent: #0e9384;
+  --accent-2: #c2410c;
+  --accent-3: #4f46e5;
+  --grid: #eceae3;
+  --glow: rgba(14, 147, 132, 0.1);
+}
+
+/* ---------- Base ---------- */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  transition:
+    background 0.4s ease,
+    color 0.4s ease;
+}
+
+/* Respect users who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Visible keyboard focus everywhere. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
