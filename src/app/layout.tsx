@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/providers/theme-provider";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { Terminal } from "@/components/terminal/terminal";
+import { Analytics } from "@vercel/analytics/next";
 import { siteConfig } from "@/lib/site.config";
 
 /* Fonts: Inter for body, JetBrains Mono for data/labels/terminal.
@@ -59,6 +60,7 @@ export default function RootLayout({
           <Footer />
           <Terminal />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
