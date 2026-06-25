@@ -3,7 +3,7 @@ import type { Stat } from "@/lib/types";
 /**
  * KPI tiles in the "At a glance" dashboard band.
  * Each tile counts up to `value` and shows a small sparkline.
- * Add or remove tiles freely — the grid adapts.
+ * Add or remove tiles freely - the grid adapts.
  *
  * These are intentionally self-evident at a glance (no project-specific
  * metrics that need a footnote to understand).

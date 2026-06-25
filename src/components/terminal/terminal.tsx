@@ -110,7 +110,7 @@ export function Terminal() {
         kind: "output",
         html: `<span class="amber">command not found:</span> ${escapeHtml(
           cmd,
-        )} <span class="dim">— try 'help'</span>`,
+        )} <span class="dim">- try 'help'</span>`,
       });
     }
 

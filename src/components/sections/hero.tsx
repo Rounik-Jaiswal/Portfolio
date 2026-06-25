@@ -3,7 +3,7 @@ import { TypedText } from "@/components/ui/typed-text";
 import { LiveClock } from "@/components/ui/live-clock";
 
 /**
- * Hero — the signature element. Frames the intro inside a "control panel"
+ * Hero - the signature element. Frames the intro inside a "control panel"
  * (terminal-style window) to ground the page in the analytics/data world.
  * All copy comes from `content/profile.ts`.
  *
@@ -32,7 +32,7 @@ export function Hero() {
               <span className="h-[11px] w-[11px] rounded-full bg-[#FEBC2E]" />
               <span className="h-[11px] w-[11px] rounded-full bg-[#28C840]" />
             </span>
-            <span className="ml-2">~/portfolio — rounik@portfolio</span>
+            <span className="ml-2">~/portfolio - rounik@portfolio</span>
             <span className="ml-auto">
               <LiveClock />
             </span>

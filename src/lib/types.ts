@@ -45,7 +45,7 @@ export interface Stat {
 
 /* ---------- Experience ---------- */
 export interface ExperienceItem {
-  period: string; // "Jan 2026 - July 2026"
+  period: string; // "Jan 2026 - Present"
   role: string;
   org: string;
   location: string;
@@ -72,6 +72,8 @@ export interface SkillBar {
   level: string;
   /** 0–100, drives the animated bar width. */
   value: number;
+  /** Category id this skill belongs to (matches a SkillCategory id). */
+  category: string;
 }
 
 export interface RadarAxis {

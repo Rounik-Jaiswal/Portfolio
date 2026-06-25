@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 /**
- * Types out each phrase, pauses, deletes, and moves to the next — looping.
+ * Types out each phrase, pauses, deletes, and moves to the next - looping.
  * Renders a blinking caret after the text. Reduced-motion users see the first
  * phrase statically (no typing loop).
  */

@@ -2,7 +2,7 @@ import { profile } from "@/content/profile";
 import { Reveal } from "@/components/ui/reveal";
 
 /**
- * Contact section. Big call-to-action, email, and social links — all pulled
+ * Contact section. Big call-to-action, email, and social links - all pulled
  * from content/profile.ts. The Footer (separate component) sits below this.
  */
 export function Contact() {

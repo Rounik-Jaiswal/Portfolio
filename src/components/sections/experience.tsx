@@ -25,7 +25,7 @@ export function Experience() {
         <div ref={ref} className="relative pl-9">
           {/* Static rail */}
           <div className="absolute left-[9px] top-1.5 bottom-1.5 w-0.5 bg-line" />
-          {/* Progress overlay — height driven by scroll progress */}
+          {/* Progress overlay - height driven by scroll progress */}
           <div
             className="absolute left-[9px] top-1.5 w-0.5 bg-accent"
             style={{ height: `calc(${progress} * (100% - 12px))` }}

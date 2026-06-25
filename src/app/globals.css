@@ -2,7 +2,7 @@
 
 /*
  * ============================================================================
- * THEME — single source of truth (Tailwind v4 is CSS-first; no JS config)
+ * THEME - single source of truth (Tailwind v4 is CSS-first; no JS config)
  * ----------------------------------------------------------------------------
  * To re-theme the entire site, edit the hex values in the two blocks below.
  * `next-themes` toggles the `data-theme` attribute on <html>, and every color
@@ -45,7 +45,7 @@
   }
 }
 
-/* Hero panel entrance — CSS-driven so the hero is never invisible if JS is
+/* Hero panel entrance - CSS-driven so the hero is never invisible if JS is
    slow or disabled (critical above-the-fold content). */
 @keyframes rise-in {
   from {
@@ -79,9 +79,9 @@
   --ink-faint: #5c6678;
   --line: #222a3a;
   --line-soft: #1a2130;
-  --accent: #4fd1c5; /* teal — data/analytics */
-  --accent-2: #f4a259; /* amber — warmth/highlight */
-  --accent-3: #7c8cff; /* indigo — dev */
+  --accent: #4fd1c5; /* teal - data/analytics */
+  --accent-2: #f4a259; /* amber - warmth/highlight */
+  --accent-3: #7c8cff; /* indigo - dev */
   --grid: #1a2130;
   --glow: rgba(79, 209, 197, 0.16);
   /* Terminal easter-egg surface */
