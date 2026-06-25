@@ -6,7 +6,7 @@ import type { ExperienceItem } from "@/lib/types";
  */
 export const experience: ExperienceItem[] = [
   {
-    period: "Jan 2026 - Present",
+    period: "Jan 2026 - July 2026",
     role: "Analyst Intern - Visualization CoE",
     org: "Bain Capability Network",
     location: "Gurugram (Hybrid)",
@@ -24,7 +24,7 @@ export const experience: ExperienceItem[] = [
     org: "Center of Disaster Management & Mitigation, VIT",
     location: "Remote",
     points: [
-      "Built and optimized ML models on cyclone data (1988–2023), reaching 98% accuracy forecasting cyclone severity in the Bay of Bengal.",
+      "Built and optimized ML models on cyclone data (1988-2023), reaching 98% accuracy forecasting cyclone severity in the Bay of Bengal.",
       "Prepared analytical reports on AI-driven cyclone forecasts and disaster-risk mitigation to support national preparedness insights.",
     ],
   },

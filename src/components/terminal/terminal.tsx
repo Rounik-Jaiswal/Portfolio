@@ -126,14 +126,14 @@ export function Terminal() {
       {/* Overlay */}
       {open && (
         <div
-          className="fixed inset-0 z-[70] grid place-items-center bg-black/60 p-5 backdrop-blur-sm"
+          className="fixed inset-0 z-[70] grid place-items-center bg-black/70 p-5 backdrop-blur-md"
           onClick={(e) => {
             if (e.target === e.currentTarget) setOpen(false);
           }}
         >
-          <div className="flex h-[min(440px,80vh)] w-[min(680px,100%)] flex-col overflow-hidden rounded-xl border border-line bg-[#0a0d13] shadow-[0_40px_90px_-30px_rgba(0,0,0,0.7)]">
+          <div className="flex h-[min(440px,80vh)] w-[min(680px,100%)] flex-col overflow-hidden rounded-xl border border-line bg-[var(--term-bg)] shadow-[0_40px_90px_-30px_rgba(0,0,0,0.5)]">
             {/* Title bar */}
-            <div className="flex items-center gap-2 border-b border-[#1a2130] px-3.5 py-2.5 font-mono text-xs text-ink-faint">
+            <div className="flex items-center gap-2 border-b border-[var(--term-border)] px-3.5 py-2.5 font-mono text-xs text-ink-faint">
               <span className="flex gap-1.5">
                 <span className="h-[11px] w-[11px] rounded-full bg-[#FF5F57]" />
                 <span className="h-[11px] w-[11px] rounded-full bg-[#FEBC2E]" />
@@ -152,7 +152,7 @@ export function Terminal() {
             {/* Output */}
             <div
               ref={outputRef}
-              className="term-output flex-1 overflow-y-auto p-4 font-mono text-[13px] leading-relaxed text-[#cfe8e4]"
+              className="term-output flex-1 overflow-y-auto p-4 font-mono text-[13px] leading-relaxed text-[var(--term-text)]"
             >
               {lines.map((line, i) => (
                 <div key={i} dangerouslySetInnerHTML={{ __html: line.html }} />
@@ -160,7 +160,7 @@ export function Terminal() {
             </div>
 
             {/* Input */}
-            <div className="flex items-center gap-2 border-t border-[#1a2130] px-4 py-2.5 font-mono text-[13px]">
+            <div className="flex items-center gap-2 border-t border-[var(--term-border)] px-4 py-2.5 font-mono text-[13px]">
               <span className="text-accent">➜ ~</span>
               <input
                 ref={inputRef}
@@ -175,7 +175,7 @@ export function Terminal() {
                 placeholder="type 'help'…"
                 autoComplete="off"
                 spellCheck={false}
-                className="flex-1 bg-transparent text-[#cfe8e4] outline-none placeholder:text-ink-faint"
+                className="flex-1 bg-transparent text-[var(--term-text)] outline-none placeholder:text-ink-faint"
               />
             </div>
           </div>

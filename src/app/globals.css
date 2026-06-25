@@ -84,6 +84,10 @@
   --accent-3: #7c8cff; /* indigo — dev */
   --grid: #1a2130;
   --glow: rgba(79, 209, 197, 0.16);
+  /* Terminal easter-egg surface */
+  --term-bg: #0a0d13;
+  --term-border: #1a2130;
+  --term-text: #cfe8e4;
 }
 
 /* ---------- Light theme ---------- */
@@ -101,6 +105,10 @@
   --accent-3: #4f46e5;
   --grid: #eceae3;
   --glow: rgba(14, 147, 132, 0.1);
+  /* Terminal easter-egg surface (light) */
+  --term-bg: #ffffff;
+  --term-border: #e3e1da;
+  --term-text: #2b3640;
 }
 
 /* ---------- Base ---------- */

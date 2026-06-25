@@ -41,7 +41,7 @@ export const terminalCommands: TerminalCommand[] = [
     name: "experience",
     listed: true,
     output:
-      "Bain Capability Network - Analyst Intern, Viz CoE (Jan 2026-present)<br>CDMM, VIT - AI Model Developer Intern (Summer 2025)",
+      "Bain Capability Network - Analyst Intern, Viz CoE (Jan 2026-July 2026)<br>CDMM, VIT - AI Model Developer Intern (Summer 2025)",
   },
   {
     name: "contact",

@@ -8,7 +8,7 @@ export const profile: Profile = {
   name: "Rounik Jaiswal",
   firstName: "Rounik",
   lastName: "Jaiswal", // rendered in the accent color
-  eyebrow: "Analyst · Visualization CoE",
+  eyebrow: "Analytics x Engineering",
 
   // Rotating phrases typed out under your name in the hero.
   typedPhrases: [

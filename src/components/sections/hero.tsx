@@ -32,7 +32,7 @@ export function Hero() {
               <span className="h-[11px] w-[11px] rounded-full bg-[#FEBC2E]" />
               <span className="h-[11px] w-[11px] rounded-full bg-[#28C840]" />
             </span>
-            <span className="ml-2">~/portfolio — rounik@bain-cn</span>
+            <span className="ml-2">~/portfolio — rounik@portfolio</span>
             <span className="ml-auto">
               <LiveClock />
             </span>
