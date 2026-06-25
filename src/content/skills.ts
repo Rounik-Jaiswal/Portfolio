@@ -2,10 +2,10 @@ import type { SkillsContent } from "@/lib/types";
 
 /**
  * Skills section data.
- * - `bars`:   the animated proficiency bars (value 0–100). Each bar has a
+ * - `bars`:   the animated proficiency bars (value 0-100). Each bar has a
  *             `category` matching one of the `categories` ids below; the
  *             category chips filter which bars are shown.
- * - `radar`:  the D3 radar chart axes (value 0–1). Always shows everything.
+ * - `radar`:  the D3 radar chart axes (value 0-1). Always shows everything.
  * - `categories`: the toggle chips above the bars.
  *
  * Note: `level` labels and bar/radar values are self-assessed estimates -

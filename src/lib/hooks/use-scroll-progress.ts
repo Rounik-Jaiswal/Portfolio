@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 
 /**
- * Returns a 0–1 value for how far the referenced element has progressed past
+ * Returns a 0-1 value for how far the referenced element has progressed past
  * the middle of the viewport. Used to grow the timeline's progress line as the
  * user scrolls through it. Updates on scroll/resize via rAF throttling.
  */

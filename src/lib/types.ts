@@ -70,7 +70,7 @@ export interface SkillBar {
   name: string;
   /** Free-text level label, e.g. "Expert". */
   level: string;
-  /** 0–100, drives the animated bar width. */
+  /** 0-100, drives the animated bar width. */
   value: number;
   /** Category id this skill belongs to (matches a SkillCategory id). */
   category: string;
@@ -78,7 +78,7 @@ export interface SkillBar {
 
 export interface RadarAxis {
   axis: string;
-  /** 0–1 proportion of the radar radius. */
+  /** 0-1 proportion of the radar radius. */
   value: number;
 }
 
@@ -108,7 +108,7 @@ export interface TerminalCommand {
 
 /* ---------- About ---------- */
 export interface About {
-  /** 2–3 sentence narrative blurb shown in the About section. */
+  /** 2-3 sentence narrative blurb shown in the About section. */
   blurb: string;
   /** Short availability line, or null to hide it. */
   availability: string | null;
