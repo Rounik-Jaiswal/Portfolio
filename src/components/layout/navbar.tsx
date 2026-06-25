@@ -19,9 +19,7 @@ export function Navbar() {
           href="#top"
           className="font-mono text-sm font-semibold tracking-tight text-ink"
         >
-          {profile.firstName.toLowerCase()}
-          <span className="text-accent">.</span>
-          {profile.lastName.toLowerCase()}
+          {brand}
         </a>
 
         <div className="flex items-center gap-6">
