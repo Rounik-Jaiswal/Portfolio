@@ -110,7 +110,7 @@ export function Terminal() {
         kind: "output",
         html: `<span class="amber">command not found:</span> ${escapeHtml(
           cmd,
-        )} <span class="dim">- try 'help'</span>`,
+        )} <span class="dim">— try 'help'</span>`,
       });
     }
 
@@ -132,14 +132,14 @@ export function Terminal() {
       {/* Overlay */}
       {open && (
         <div
-          className="fixed inset-0 z-[70] grid place-items-center bg-black/70 p-3 backdrop-blur-md sm:p-5"
+          className="fixed inset-0 z-[70] grid grid-rows-1 items-stretch bg-black/70 p-0 backdrop-blur-md sm:place-items-center sm:p-5"
           onClick={(e) => {
             if (e.target === e.currentTarget) setOpen(false);
           }}
         >
-          <div className="flex h-[min(440px,80dvh)] w-[min(680px,100%)] flex-col overflow-hidden rounded-xl border border-line bg-[var(--term-bg)] shadow-[0_40px_90px_-30px_rgba(0,0,0,0.5)]">
+          <div className="flex h-[100dvh] w-full flex-col overflow-hidden border border-line bg-[var(--term-bg)] shadow-[0_40px_90px_-30px_rgba(0,0,0,0.5)] sm:h-[min(440px,80dvh)] sm:w-[min(680px,100%)] sm:rounded-xl">
             {/* Title bar */}
-            <div className="flex items-center gap-2 border-b border-[var(--term-border)] px-3.5 py-2.5 font-mono text-xs text-ink-faint">
+            <div className="flex shrink-0 items-center gap-2 border-b border-[var(--term-border)] px-3.5 py-2.5 font-mono text-xs text-ink-faint">
               <span className="flex shrink-0 gap-1.5">
                 <span className="h-[11px] w-[11px] rounded-full bg-[#FF5F57]" />
                 <span className="h-[11px] w-[11px] rounded-full bg-[#FEBC2E]" />
@@ -158,7 +158,7 @@ export function Terminal() {
             {/* Output */}
             <div
               ref={outputRef}
-              className="term-output flex-1 overflow-y-auto p-4 font-mono text-[13px] leading-relaxed text-[var(--term-text)]"
+              className="term-output min-h-0 flex-1 overflow-y-auto p-4 font-mono text-[13px] leading-relaxed text-[var(--term-text)]"
             >
               {lines.map((line, i) => (
                 <div key={i} dangerouslySetInnerHTML={{ __html: line.html }} />
@@ -166,7 +166,7 @@ export function Terminal() {
             </div>
 
             {/* Input */}
-            <div className="flex items-center gap-2 border-t border-[var(--term-border)] px-4 py-2.5 font-mono text-[13px]">
+            <div className="flex shrink-0 items-center gap-2 border-t border-[var(--term-border)] px-4 py-2.5 font-mono text-[13px]">
               <span className="text-accent">➜ ~</span>
               <input
                 ref={inputRef}

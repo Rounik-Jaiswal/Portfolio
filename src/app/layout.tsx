@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -44,6 +44,17 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     ...(siteConfig.ogImage && { images: [siteConfig.ogImage] }),
   },
+};
+
+/**
+ * `interactive-widget: resizes-content` tells mobile browsers to shrink the
+ * layout viewport when the on-screen keyboard appears, so dvh-based heights and
+ * fixed overlays (like the terminal) reflow to fit instead of being covered.
+ */
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  interactiveWidget: "resizes-content",
 };
 
 export default function RootLayout({
